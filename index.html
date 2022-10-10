@@ -1,0 +1,1784 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/ismir_tab_icon.png">
+
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    <link rel="stylesheet" href="static/css/lazy_load.css" />
+    <link rel="stylesheet" href="static/css/typeahead.css" />
+    <link rel="stylesheet" href="static/css/poster.css" />
+    <link rel="stylesheet" href="static/css/music.css" />
+    <link rel="stylesheet" href="static/css/piece.css" />
+
+
+    <!-- <link rel="stylesheet" href="https://gitcdn.xyz/repo/wingkwong/jquery-chameleon/master/src/chameleon.min.css"> -->
+
+    <!-- External Javascript libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.28/builds/moment-timezone-with-data.min.js" integrity="sha256-IWYg4uIC8/erItNXYvLtyYHioRi2zT1TFva8qaAU/ww=" crossorigin="anonymous"></script>
+    <!-- <script src="static/js/chameleon.js"></script> -->
+
+
+    <!-- Library libs -->
+    <script src="static/js/typeahead.bundle.js"></script>
+
+    
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous">
+
+    <!-- External Fonts (no google for china) -->
+    <link
+      href="static/css/Lato.css"
+      rel="stylesheet"
+    />
+    <link href="static/css/Exo.css" rel="stylesheet" />
+    <link
+      href="static/css/Cuprum.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/css/Ambiant.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="static/css/chameleon.css" rel="stylesheet"/> -->
+    <title>ISMIR 2020</title>
+    
+  </head>
+
+  <body>
+    <!-- NAV -->
+    
+    <!--
+    ('index.html, 'Home'),
+    ('special_meetings.html', 'Special Meetings'),
+    -->
+
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light mr-auto"
+      id="main-nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="https://ismir2020.net/">
+          <img
+             class="logo" src="static/images/ISMIR-logo_Horizontal - Acronym only_RGB.jpg"
+             height="auto"
+             width="200px"
+          />
+        </a>
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-right flex-grow-1"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="calendar.html">Schedule</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="papers.html">Papers</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="music.html">Music</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="lbds.html">LBDs</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="industry.html">Industry</a>
+            </li>
+            
+            <li class="nav-item ">
+              <a class="nav-link" href="tutorials.html">Tutorials</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    <!-- User Overrides -->
+    
+<style>
+  .back {
+    background: url("static/images/ISMIR_Homepage_HERO_IMAGE.png") no-repeat center;
+    background-size: cover;
+  }
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        ISMIR 2020 <br> VIRTUAL <br> CONFERENCE
+      </h2>
+      <h2 class="p-5">
+        11-16 October 2020
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+         
+      </div>
+      <!-- Content -->
+      <div class="content">
+        
+
+<h2>Welcome to ISMIR 2020!</h2>
+
+<!-- Organizers -->
+<div class="border-top my-3"></div>
+<div class="row p-4" id="faq">
+  <div class="col-12 bd-content">
+    <h2 class="text-center">Organizers</h2>
+  </div>
+</div>
+<div class="organizers">
+  <div class="row">
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>General Co-Chair</h3> -->
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/audrey_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Audrey Laplante</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                General Co-Chair
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/ich_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Ichiro Fujinaga</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                General Co-Chair
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Scientific Program</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/julie_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Julie Cumming</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Scientific Program
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/jinha_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Jin Ha Lee</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Scientific Program
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/brian_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Brian McFee</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Scientific Program
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/markus_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Markus Schedl</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Scientific Program
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Publication</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/johanna_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Johanna Devaney</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Publication
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/cory_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Cory McKay</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Publication
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/eva_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Eva Zangerle</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Publication
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Tutorials</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/blair_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Blair Kaneshiro</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Tutorials
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/mohamed_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Mohamed Sordo</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Tutorials
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Late-breaking/Demo</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/xiaoxhu_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Xiao Hu</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Late-breaking/Demo
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/christian_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Christian Frisson</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Late-breaking/Demo
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Satellite Events</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/jordan_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Jordan B. L. Smith</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Satellite Events
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/finn_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Finn Upham</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Satellite Events
+              </h6>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Virtual Technology
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>WiMIR</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/claire_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Claire Arthur</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                WiMIR
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/katherine_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Katherine Kinnaird</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                WiMIR
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Unconference</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Sponsorship</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/elena_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Elena Georgieva</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Sponsorship
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/zhengshan_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Zhengshan (Kitty) Shi</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Sponsorship
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Industry</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/rachel_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Rachel Bittner</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Industry
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/thor_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Thor Kell</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Industry
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Music</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/guillaume_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Guillaume Boutard</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Music
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/gabriel_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Gabriel Vigliensoni</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Music
+              </h6>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Local Arrangements
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Virtual Technology</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Website and Conference Management Software</h3> -->
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/evan_savage_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Evan Savage</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Website and Conference Management Software
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/nestor_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Néstor Nápoles López</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Website and Conference Management Software
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Local Arrangements</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/emily_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Emily Hopkins</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Local Arrangements
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+     <!-- Maintains ordering from original site -->
+    <!-- <h3>Volunteer</h3> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-md-4 col-xs-6 col-sm-6">
+      <div class="pp-card">
+        <div class="pp-card-header" class="text-muted">
+          <center>
+            
+            <img src="static/images/organizers/caroline_100px.jpg" class="rounded" style="height: 100px;" />
+            
+          </center>
+          <h5 class="card-title" align="center">Caroline Traube</h5>
+          <div>
+            
+              <h6 class="card-subtitle text-muted m-1" align="center">
+                Volunteer
+              </h6>
+            
+          </div>
+          <div>
+            <h6 class="card-subtitle text-muted m-1" align="center">
+              
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    
+    
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-");
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer bg-light p-4">
+      <div class="container">
+        <p class="float-right"><a href="#">Back to Top</a></p>
+        <p class="text-center">© 2020 ISMIR Organization Committee</p>
+      </div>
+    </footer>
+
+    <!-- Code for hash tags -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        if (location.hash !== "") {
+          $('a[href="' + location.hash + '"]').tab("show");
+        }
+
+        $("a[data-toggle='tab']").on("shown.bs.tab", function (e) {
+          var hash = $(e.target).attr("href");
+          if (hash.substr(0, 1) == "#") {
+            var position = $(window).scrollTop();
+            location.replace("#" + hash.substr(1));
+            $(window).scrollTop(position);
+          }
+        });
+      });
+    </script>
+    <script src="static/js/lazy_load.js"></script>
+    
+  </body>
+</html>
